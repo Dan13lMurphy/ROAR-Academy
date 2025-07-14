@@ -1,8 +1,8 @@
-## This is course material for Introduction to Python Scientific Programming
-## Example code: plot_3D.py
-## Author: Allen Y. Yang,  Intelligent Racing Inc.
+# This is course material for Introduction to Python Scientific Programming
+# Example code: plot_3D.py
+# Author: Allen Y. Yang,  Intelligent Racing Inc.
 ##
-## (c) Copyright 2020. Intelligent Racing Inc. Not permitted for commercial use
+# (c) Copyright 2020. Intelligent Racing Inc. Not permitted for commercial use
 
 from mpl_toolkits import mplot3d
 import numpy as np
