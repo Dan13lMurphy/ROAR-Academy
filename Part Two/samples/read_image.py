@@ -1,8 +1,8 @@
-## This is course material for Introduction to Python Scientific Programming
-## Example code: read_image.py
-## Author: Allen Y. Yang
+# This is course material for Introduction to Python Scientific Programming
+# Example code: read_image.py
+# Author: Allen Y. Yang
 ##
-## (c) Copyright 2020. Intelligent Racing Inc. Not permitted for commercial use
+# (c) Copyright 2020. Intelligent Racing Inc. Not permitted for commercial use
 
 # Please do <pip3 install matplotlib> and <pip3 install pillow> first
 from matplotlib import image
@@ -22,8 +22,9 @@ print('Image shape is: ', data.shape)
 plot_data = data.copy()
 for width in range(512):
     for height in range(10):
-        plot_data[height][width] = [255, 0, 0]   # Alternatively plot_data[height][width][:] = [255, 0, 0]
-        plot_data[511-height][width] = [0,0,255]
+        # Alternatively plot_data[height][width][:] = [255, 0, 0]
+        plot_data[height][width] = [255, 0, 0]
+        plot_data[511-height][width] = [0, 0, 255]
 
 # Write the modified images
 image.imsave(path+'/'+'lenna-mod.jpg', plot_data)
