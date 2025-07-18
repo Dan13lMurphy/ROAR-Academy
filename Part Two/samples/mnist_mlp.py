@@ -1,8 +1,8 @@
-## This is course material for Introduction to Modern Artificial Intelligence
-## Example code: mnist_mlp.py
-## Author: Allen Y. Yang
+# This is course material for Introduction to Modern Artificial Intelligence
+# Example code: mnist_mlp.py
+# Author: Allen Y. Yang
 ##
-## (c) Copyright 2020. Intelligent Racing Inc. Not permitted for commercial use
+# (c) Copyright 2020. Intelligent Racing Inc. Not permitted for commercial use
 import keras
 import tensorflow as tf
 from keras.datasets import mnist
@@ -24,8 +24,8 @@ img_rows, img_cols = 28, 28
 print(y_train[0:20])
 plt.figure(1)
 for i in range(20):
-    plt.subplot(2,10,i+1)
-    plt.imshow(x_train[i], cmap = plt.cm.binary)
+    plt.subplot(2, 10, i+1)
+    plt.imshow(x_train[i], cmap=plt.cm.binary)
 plt.show()
 
 x_train = x_train.reshape(x_train.shape[0], img_rows*img_cols)
@@ -51,7 +51,7 @@ model = Sequential()
 model.add(Dense(800, input_shape=input_shape, activation='relu'))
 model.add(Dense(800, activation='relu'))
 model.add(Dense(128, activation='relu'))
-model.add(Dense(num_classes, activation='softmax' ))
+model.add(Dense(num_classes, activation='softmax'))
 
 opt = tf.keras.optimizers.SGD(learning_rate=0.1)
 model.compile(loss='mean_squared_error',
